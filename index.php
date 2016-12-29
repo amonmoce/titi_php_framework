@@ -1,16 +1,16 @@
 <?php
-include_once 'include/main.php';
+include_once 'configs/config.php';
 use components\model\index_model;
 
 class index extends dispatcher {
 
     function __construct(){ 	
-        //$this->db_model = new index_model();
+        $this->data_model = new index_model();
         parent::__construct();
     }    
 
     function index(){
-        $data['reply'] = 'yes';
+        $data = $this->data_model->index();
 		$this->controller->response($data);
     }
 

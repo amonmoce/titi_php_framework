@@ -5,11 +5,11 @@ class dispatcher {
     protected $action;
 
     function __construct(){
-        $this -> controller = new Basic_page_controller();
+        $this -> controller = new basic_page_controller();
       
         //預設輸入資料擷取
-        // $action = laout_check($_REQUEST['action']);
-        // $action_switch = laout_check($_REQUEST['action']);
+        //$action = laout_check($_REQUEST['action']);
+        $action_switch = laout_check($_REQUEST['action']);
         //end 預設輸入資料擷取
         
         //end
@@ -257,8 +257,7 @@ class dispatcher {
             case 'check_account':
             $this->check_account();
                 break;  
-                
-                
+                       
             case 'twitter_login':
             $this->twitter_login();
                 break;  
@@ -311,8 +310,7 @@ class dispatcher {
                    
             case 'lesson_word':
             $this->lesson_word();
-                break;   
-                
+                break;            
                 
             case 'test_list': //open_test room
             $this->test_list();

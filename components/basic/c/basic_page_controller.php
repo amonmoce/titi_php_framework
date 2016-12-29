@@ -3,7 +3,7 @@ namespace components\basic\c;
 
 use components\basic\URLRewrite;
 
-class  Basic_page_controller{
+class  basic_page_controller{
 
     function __construct(){
         $ReURL = new URLRewrite();
