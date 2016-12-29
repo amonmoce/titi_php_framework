@@ -1,6 +1,6 @@
 <?php
 //定義這個class 在那一個範圍內
-namespace classes\model;
+namespace components\model;
     class  default_list_model extends default_set_model {
         function __construct(){
         	parent::__construct();

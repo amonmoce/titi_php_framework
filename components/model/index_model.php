@@ -14,10 +14,9 @@ class  index_model extends default_list_model {
 	function view_list($type ='array'){
 		echo $this; exit;
 		if($type != 'array')
-		return $this -> obj_tmp1; 
+			return $this -> obj_tmp1; 
 		else
-		return $this -> obj_tmp1 ->laout_arr; 
-			
+			return $this -> obj_tmp1 ->laout_arr;	
 	}
 	
 	function __get($property_name){ 

@@ -1,13 +1,10 @@
 <?php
-use classes\URLRewrite;
-use classes\basic\c\basic_page_controller;
+use components\basic\c\basic_page_controller;
 
-class default_set {
+class dispatcher {
     protected $action;
 
     function __construct(){
-        $ReURL = new URLRewrite();
-        $ReURL->ParseUrl();
         $this -> controller = new Basic_page_controller();
       
         //預設輸入資料擷取
@@ -342,7 +339,7 @@ class default_set {
                 break;               
 
             default:                       
-            $this->view_list();
+            $this->index();
                 break;
         }   
         // end每個功能前置 

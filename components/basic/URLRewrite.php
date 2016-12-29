@@ -1,5 +1,5 @@
 <?php
-namespace classes;
+namespace components\basic;
 
 class URLRewrite {
     var $_query_string;
