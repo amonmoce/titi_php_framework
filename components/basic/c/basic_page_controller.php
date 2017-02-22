@@ -14,6 +14,11 @@ class  basic_page_controller{
     }
 
     function response($data){
-        echo json_encode($data);
+        echo json_encode($data, JSON_UNESCAPED_UNICODE);
+    }
+
+    function view($template){
+        $this->template = $template;
+        include_once 'templates/layout.php';
     }
 }

@@ -1,0 +1,1 @@
+Tealit framework is ready!! Here should be your html

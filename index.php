@@ -10,10 +10,15 @@ class index extends dispatcher {
     }    
 
     function index(){
-        $data = $this->data_model->index();
-		$this->controller->response($data);
+        // get some data from data source
+        //$data = $this->data_model->index();
+		//send only some data
+        //$this->controller->response($data);
+        // get the html template
+        $template = get_class($this);
+        //send view
+        $this->controller->view($template);
     }
-
 
 }
 

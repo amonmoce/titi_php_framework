@@ -31,23 +31,6 @@ function str_make($tmp_x){
 }
 */
 
-/*
-function laout_check($value)
-{
-// 去除斜杠
-if (get_magic_quotes_gpc())
-{
-$value = stripslashes($value);
-}
-// 如果不是数字则加引号
-if (!is_numeric($value))
-{
-  $value =mysql_real_escape_string($value);
-}
-return $value;
-}
-*/
-
 function get_counter(){
   $action_counter_sql="select * from action_counter where action='pageview'";
   $result = mysql_query($action_counter_sql);
@@ -58,8 +41,7 @@ function get_counter(){
    } 
 }
 
-function getIP ()
-{
+function getIP (){
   global $_SERVER;
   if (getenv('HTTP_CLIENT_IP')) {
   echo $ip = getenv('HTTP_CLIENT_IP');
@@ -80,8 +62,7 @@ function getIP ()
   return $ip;
 }
 
-function upload_file_to_fd($first_path,$file_type=null,$old_file_name=null,$w=null,$h=null)
-{
+function upload_file_to_fd($first_path,$file_type=null,$old_file_name=null,$w=null,$h=null){
 
 if(empty($_FILES)){return "";}
   foreach ($_FILES["file"]["name"] as $key =>&$value) {
@@ -173,8 +154,7 @@ if(empty($_FILES)){return "";}
 }
 
 //for 前台
-function upload_file_to_fd_fontend($first_path,$file_type=null,$old_file_name=null,$w=null,$h=null)
-{
+function upload_file_to_fd_fontend($first_path,$file_type=null,$old_file_name=null,$w=null,$h=null){
 if(empty($_FILES)){return "";}
   foreach ($_FILES["file"]["name"] as $key =>&$value) {
 	if($key ==0){

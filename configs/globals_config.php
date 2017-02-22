@@ -3,7 +3,7 @@ define ("PAGE_NAME", basename($_SERVER['PHP_SELF'],'.php'));
 define ("FILE_PATH", dirname($_SERVER['PHP_SELF']));
 define ("FILE_REAL_PATH", dirname($_SERVER['SCRIPT_FILENAME']));
 define ("ROOT_PATH", $_SERVER['DOCUMENT_ROOT']);
-define ("SITE_DIR", '/tealit_api');
+define ("SITE_DIR", '/api');
 if(!empty($_SERVER['DOCUMENT_ROOT'])){
 		define ("SITE_PATH", ROOT_PATH.SITE_DIR);	
 }else{

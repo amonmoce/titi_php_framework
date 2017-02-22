@@ -15,8 +15,8 @@ class  index_model {
 
 	function index(){
 		// Taking data from data source (here database)
-		$sql = "select * from tch_teach";
-		$this->model->basic_select('data', 'teachers', $sql);
+		$sql = "select * from article";
+		$this->model->basic_select('data', 'article', $sql);
 		// End taking data
 		return $this -> model-> data;
 	}
