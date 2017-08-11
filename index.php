@@ -14,12 +14,19 @@ class index extends dispatcher {
         //$data = $this->data_model->index();
 		//send only some data
         //$this->controller->response($data);
-        // get the html template
-        $template = get_class($this);
-        //send view
-        $this->controller->view($template);
+        //send the name of this class to view its template
+        $this->controller->view(get_class($this));
     }
-
+    function event(){
+        $data = $this->data_model->event();
+        $this->controller->response($data);
+        //$this->controller->view(get_class($this), $data);
+    }
+    function event_result(){
+        $data = $this->data_model->event_result();
+        //$this->controller->response($data);
+        $this->controller->view(get_class($this), $data);
+    }
 }
 
 if (class_exists(index)){

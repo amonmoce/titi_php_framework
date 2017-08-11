@@ -6,9 +6,11 @@
     <body>
         <?php
             switch($this->template){
-                case 'index':
-                    include_once 'index_view.php';
+                
+                default:
+                    include_once 'index.html.php';
                     break;
+                    
             }
         ?>
     </body>

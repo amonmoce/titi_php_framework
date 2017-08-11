@@ -17,8 +17,9 @@ class  basic_page_controller{
         echo json_encode($data, JSON_UNESCAPED_UNICODE);
     }
 
-    function view($template){
+    function view($template, $data=null){
+        $this->data = $data;
         $this->template = $template;
-        include_once 'templates/layout.php';
+        include_once 'templates/layout.html.php';
     }
 }

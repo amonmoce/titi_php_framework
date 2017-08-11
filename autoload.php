@@ -1,5 +1,5 @@
 <?php
-//會先從檔案的資料夾往內找，找不到才會往外層找
+
 function autoload($className){
     $className = ltrim($className, '\\');
     $fileName  = '';

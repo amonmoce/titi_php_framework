@@ -1,5 +1,5 @@
 <?php
-//pubic func  
+
 function action_counter($action){
 
   $url_log=$_SERVER['SERVER_NAME'].$_SERVER['REQUEST_URI'];
@@ -75,7 +75,7 @@ if(empty($_FILES)){return "";}
     $name=null; //命名變數
     if($file_type !=null){
       $check_type=explode(',',$file_type);
-      foreach ($check_type as &$value1) {
+      foreach ($check_type as &$value1){
         if($value1 == $_FILES["file"]["type"][$key] ){
           $check_pass=1;
         }

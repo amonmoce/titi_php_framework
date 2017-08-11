@@ -1,5 +1,5 @@
-tealit talk api
-===============
+tealit web framework
+====================
  This is tealit web framework
 
  ## Add new page
@@ -8,6 +8,6 @@ tealit talk api
  ```
  // get the html template
 $template = get_class($this);
-//send view
+// send view
 $this->controller->view($template);
  ```
