@@ -1,8 +1,8 @@
-tealit web framework
+tea web framework
 ====================
- This is tealit web framework
+ This is tea web framework
 
- ## Add new page
+ ## Add new controller
  create [your_page_name].php in root document
  go in the index method of [your_page_name].php and add this line:
  ```

@@ -6,22 +6,21 @@ class dispatcher {
 
     function __construct(){
         $this -> controller = new basic_page_controller();
-      
+
         $action_switch = laout_check($_REQUEST['action']);
-      
+
         switch ($action_switch) {
-            case 'event_result':
-                $this->event_result();
-                break;   
-            case 'event':
-                $this->event();
-                break;
-            default:                       
+            case 'user':
+              $this->user();
+              break;
+            case 'properties':
+              $this->properties();
+              break;
+            default:
                 $this->index();
                 break;
-        }   
- 
-    }   
+        }
+
+    }
 
 }
-
